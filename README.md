@@ -16,4 +16,24 @@ nohup /root/runoob.sh > runoob.log 2>&1 &
 	0 – stdin (standard input，标准输入)
 	1 – stdout (standard output，标准输出)
 	2 – stderr (standard error，标准错误输出)
-   ```
+```
+## 三、问题处理
+### 1. ubuntu提示文件系统根目录上的磁盘空间不足：
+>安装gparted：sudo apt-get install gparted
+
+>启动gparted：sudo gparted
+
+>手动调整即可
+>
+>![图片](https://github.com/d-never/Linux/blob/main/pictures/linux01.png?raw=true)
+### 2. root前出现base
+>a. 每次处理
+```python
+conda deactivate
+conda activate
+```
+>b. 永久处理
+```python
+conda config --set auto_activate_base false
+conda config --set auto_activate_base true
+```
